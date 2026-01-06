@@ -1,0 +1,35 @@
+
+# if __name__ == "__main__":
+#     count:int = 0
+#     n: int = int(input("emter the number of the values :"))
+#     if n <= 0:
+#         print("please enter at least one value.")
+#     while n > 0:
+#         if n%10:
+#             count += 1
+#         n = n//10
+#     print(f"the number of digits in the given number is {count}")    
+    
+# if __name__ == "__main__":
+#     n:int = int(input("enter the number :"))
+#     num:int = 0
+#     while n>0:
+#         digit:int = n%10
+#         num = num *10 +digit
+#         n = n//10
+#     print(f"the reverse of the number is {num}")    
+
+def palindrom(n:int) -> bool:
+    original:int = n
+    reversed_num :int =0
+    while n>0:
+        digit = n%10
+        reversed_num = reversed_num *10 + digit
+        n = n//10
+    return original == reversed_num
+if __name__ == "__main__":
+    n:int = int(input("enter the number :"))
+    if palindrom(n):
+        print(f"the number {n} is palindrom")
+    else:
+        print(f"the number {n} is not palindrom")
